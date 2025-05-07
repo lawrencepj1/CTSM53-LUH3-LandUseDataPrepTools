@@ -1,0 +1,18 @@
+
+if [ -f ./ctsm53landuseprepconfig ]; 
+then
+    source ./ctsm53landuseprepconfig
+fi
+
+if [ -f ../ctsm53landuseprepconfig ]; 
+then
+    source ../ctsm53landuseprepconfig
+fi
+
+if [ -d ${timeseriessurfdir} ]; 
+then
+    echo "Timeseries Surface Directory ${timeseriessurfdir} Already Exists"
+else
+    mkdir ${timeseriessurfdir}
+    mkdir ${timeseriessurfdir}CTSM53_MODIS_CURRENT
+fi

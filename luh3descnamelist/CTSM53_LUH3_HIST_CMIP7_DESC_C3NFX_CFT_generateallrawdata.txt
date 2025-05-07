@@ -1,0 +1,11 @@
+author                               Peter Lawrence, lawrence@ucar.edu, NCAR, Terrestrial Sciences Section 
+luh3descallc3nfxallcftname           CTSM53_LUH3_HIST_CMIP7_DESC_C3NFX_ALL_CFT
+luh3descrawcftoutput                 CTSM53_LUH3_HIST_CMIP7
+luh3descrawcftoutputc3nfxname        C3NFX_DESC_GEOG_DEG025
+workrawclm5input                     CTSM53_MODIS_CURRENT
+workrawclm5inputname                 CLM5_GEOG_DEG025
+workrawclm5inputyear                 2005
+clm5modisrawinput                    CLM5_GEOG_DEG025
+clm5modisrawrreferenceyear           2005
+clm5modisrawrstartyear               1961
+clm5modisrawrendyear                 2015

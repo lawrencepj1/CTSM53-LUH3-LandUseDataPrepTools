@@ -1,0 +1,55 @@
+
+if [ -f ./ctsm53landuseprepconfig ]; 
+then
+    source ./ctsm53landuseprepconfig
+fi
+
+if [ -f ../ctsm53landuseprepconfig ]; 
+then
+    source ../ctsm53landuseprepconfig
+fi
+
+if [ -d ${luh3descrawdir} ]; 
+then
+    echo "LUH3Desc Raw Directory ${luh3descrawdir} Already Exists"
+else
+    mkdir ${luh3descrawdir}
+    mkdir ${luh3descrawdir}CTSM53_LUH3_HIST_CMIP7
+    mkdir ${luh3descrawdir}CTSM53_LUH3_HIST_CMIP7/PRIMF_DESC_GEOG_DEG025
+    mkdir ${luh3descrawdir}CTSM53_LUH3_HIST_CMIP7/PRIMN_DESC_GEOG_DEG025
+    mkdir ${luh3descrawdir}CTSM53_LUH3_HIST_CMIP7/SECDF_DESC_GEOG_DEG025
+    mkdir ${luh3descrawdir}CTSM53_LUH3_HIST_CMIP7/SECDN_DESC_GEOG_DEG025
+    mkdir ${luh3descrawdir}CTSM53_LUH3_HIST_CMIP7/RANGE_DESC_GEOG_DEG025
+    mkdir ${luh3descrawdir}CTSM53_LUH3_HIST_CMIP7/PASTR_DESC_GEOG_DEG025
+    mkdir ${luh3descrawdir}CTSM53_LUH3_HIST_CMIP7/C3ANN_DESC_GEOG_DEG025
+    mkdir ${luh3descrawdir}CTSM53_LUH3_HIST_CMIP7/C4ANN_DESC_GEOG_DEG025
+    mkdir ${luh3descrawdir}CTSM53_LUH3_HIST_CMIP7/C3PER_DESC_GEOG_DEG025
+    mkdir ${luh3descrawdir}CTSM53_LUH3_HIST_CMIP7/C4PER_DESC_GEOG_DEG025
+    mkdir ${luh3descrawdir}CTSM53_LUH3_HIST_CMIP7/C3NFX_DESC_GEOG_DEG025
+    mkdir ${luh3descrawdir}CTSM53_LUH3_SSP119_CMIP7
+    mkdir ${luh3descrawdir}CTSM53_LUH3_SSP119_CMIP7/SECDF_DESC_GEOG_DEG025
+    mkdir ${luh3descrawdir}CTSM53_LUH3_SSP126_CMIP7
+    mkdir ${luh3descrawdir}CTSM53_LUH3_SSP126_CMIP7/SECDF_DESC_GEOG_DEG025
+    mkdir ${luh3descrawdir}CTSM53_LUH3_SSP245_CMIP7
+    mkdir ${luh3descrawdir}CTSM53_LUH3_SSP245_CMIP7/SECDF_DESC_GEOG_DEG025
+    mkdir ${luh3descrawdir}CTSM53_LUH3_SSP370_CMIP7
+    mkdir ${luh3descrawdir}CTSM53_LUH3_SSP370_CMIP7/SECDF_DESC_GEOG_DEG025
+    mkdir ${luh3descrawdir}CTSM53_LUH3_SSP460_CMIP7
+    mkdir ${luh3descrawdir}CTSM53_LUH3_SSP460_CMIP7/SECDF_DESC_GEOG_DEG025
+    mkdir ${luh3descrawdir}CTSM53_LUH3_SSP585_CMIP7
+    mkdir ${luh3descrawdir}CTSM53_LUH3_SSP585_CMIP7/SECDF_DESC_GEOG_DEG025
+fi
+
+if [ -d ${luh3descsurfdir} ]; 
+then
+    echo "LUH2Desc Surface Directory ${luh3descsurfdir} Already Exists"
+else
+    mkdir ${luh3descsurfdir}
+    mkdir ${luh3descsurfdir}CTSM53_LUH3_HIST_CMIP7
+    mkdir ${luh3descsurfdir}CTSM53_LUH3_SSP119_CMIP7
+    mkdir ${luh3descsurfdir}CTSM53_LUH3_SSP126_CMIP7
+    mkdir ${luh3descsurfdir}CTSM53_LUH3_SSP245_CMIP7
+    mkdir ${luh3descsurfdir}CTSM53_LUH3_SSP370_CMIP7
+    mkdir ${luh3descsurfdir}CTSM53_LUH3_SSP460_CMIP7
+    mkdir ${luh3descsurfdir}CTSM53_LUH3_SSP585_CMIP7
+fi

@@ -1,0 +1,176 @@
+Instructions for Processing the CTSM53 LUH3 Land Use Data Prep Tools
+
+Historical Descriptor File Generation
+
+1. Generate All Base LUH3 surface datasets 
+
+   tools/runcreateluh3allsurfdata luh3namelist/LUH3_NOANTHRO_CMIP7_gensurfdata.txt
+   tools/runcreateluh3allsurfdata luh3namelist/LUH3_HIST_CMIP7_gensurfdata.txt
+   tools/runcreateluh3allsurfdata luh3namelist/LUH3_SSP119_CMIP7_gensurfdata.txt
+   tools/runcreateluh3allsurfdata luh3namelist/LUH3_SSP126_CMIP7_gensurfdata.txt
+   tools/runcreateluh3allsurfdata luh3namelist/LUH3_SSP245_CMIP7_gensurfdata.txt
+   tools/runcreateluh3allsurfdata luh3namelist/LUH3_SSP370_CMIP7_gensurfdata.txt
+   tools/runcreateluh3allsurfdata luh3namelist/LUH3_SSP460_CMIP7_gensurfdata.txt
+   tools/runcreateluh3allsurfdata luh3namelist/LUH3_SSP585_CMIP7_gensurfdata.txt
+
+2. Generate CTSM53 MODIS EarthStat, MODIS Current and CRU raw and surface data files
+
+   tools/runcreateworkmodiscurrentallrawdata worknamelist/CTSM53_MODIS_CURRENT_generateallrawdata.txt
+   tools/runcreateworkclm5surfdata worknamelist/CTSM53_MODIS_CURRENT_generatesurfdata.txt
+   tools/runcreateworkclimatesurfdata worknamelist/CRU_321_generatesurfdata.txt
+
+3. Generate CRU CTSM LUH3 climate vegetation cover lookup files - if they don't a
+
+   tools/runcreateluh3modiscruclimatevegetationlutfiles LUH3_MODIS_CRU_HIST_CMIP7 2005
+   
+4. Generate CTSM53 MODIS EarthStat and Initial Potential Vegetation Continuous Fields (VCF) in workrawdata
+
+   tools/runcreateworkmodiscurrentvcfrawdata worknamelist/CTSM53_MODIS_CURRENT_VCF_generateallrawdata.txt
+   tools/runcreateworkpotvegforestinitialvcfrawdata worknamelist/CTSM53_POTVEGINIT_FOREST_VCF_generateallrawdata.txt
+   tools/runcreateworkpotvegnonforestinitialvcfrawdata worknamelist/CTSM53_POTVEGINIT_NONFOREST_VCF_generateallrawdata.txt
+   tools/runcreateworkpotvegrangeinitialvcfrawdata worknamelist/CTSM53_POTVEGINIT_RANGE_VCF_generateallrawdata.txt
+
+   Check Initial Vegetation Continuous Fields (VCF) netcdf files in worksurfdata - Optional
+
+   tools/runcreateworkvcfsurfdata worknamelist/CTSM53_MODIS_CURRENT_VCF_generatesurfdata.txt
+   tools/runcreateworkvcfsurfdata worknamelist/CTSM53_POTVEGINIT_FOREST_VCF_generatesurfdata.txt
+   tools/runcreateworkvcfsurfdata worknamelist/CTSM53_POTVEGINIT_NONFOREST_VCF_generatesurfdata.txt
+   tools/runcreateworkvcfsurfdata worknamelist/CTSM53_POTVEGINIT_RANGE_VCF_generatesurfdata.txt
+   
+5. Generate Combined Vegetation Continuous Fields (VCF) for Climate Potential Vegetation in workrawdata
+
+   tools/runcreateworkpotvegallcombinedvcfrawdata worknamelist/CTSM53_POTVEGCOMB_ALL_VCF_generateallrawdata.txt
+
+   Check Vegetation Continuous Fields (VCF) netcdf files in worksurfdata - Optional
+
+   tools/runcreateworkvcfsurfdata worknamelist/CTSM53_POTVEGCOMB_FOREST_VCF_generatesurfdata.txt
+   tools/runcreateworkvcfsurfdata worknamelist/CTSM53_POTVEGCOMB_NONFOREST_VCF_generatesurfdata.txt
+   tools/runcreateworkvcfsurfdata worknamelist/CTSM53_POTVEGCOMB_RANGE_VCF_generatesurfdata.txt
+   
+6. Generate Current Day Scaled Vegetation Continuous Fields (VCF) for Climate Potential Vegetation in workrawdata
+
+   tools/runcreateworkpotvegallscaledvcfrawdata worknamelist/CTSM53_POTVEGSCALED_ALL_VCF_generateallrawdata.txt
+
+   Check Vegetation Continuous Fields (VCF) netcdf files in worksurfdata - Optional
+
+   tools/runcreateworkvcfsurfdata worknamelist/CTSM53_POTVEGSCALED_FOREST_VCF_generatesurfdata.txt
+   tools/runcreateworkvcfsurfdata worknamelist/CTSM53_POTVEGSCALED_NONFOREST_VCF_generatesurfdata.txt
+   tools/runcreateworkvcfsurfdata worknamelist/CTSM53_POTVEGSCALED_RANGE_VCF_generatesurfdata.txt
+   
+7. Generate Maximum Vegetation Continuous Fields (VCF) for Climate Potential Vegetation in workrawdata. 
+   Potential Vegetation is updated where current day MODIS EarthStat vegetation is higher.
+
+   tools/runcreateworkpotvegallmaxvcfrawdata worknamelist/CTSM53_POTVEGMAX_ALL_VCF_generateallrawdata.txt
+
+   Check Vegetation Continuous Fields (VCF) netcdf files in worksurfdata - Optional
+
+   tools/runcreateworkvcfsurfdata worknamelist/CTSM53_POTVEGMAX_FOREST_VCF_generatesurfdata.txt
+   tools/runcreateworkvcfsurfdata worknamelist/CTSM53_POTVEGMAX_NONFOREST_VCF_generatesurfdata.txt
+   tools/runcreateworkvcfsurfdata worknamelist/CTSM53_POTVEGMAX_RANGE_VCF_generatesurfdata.txt
+   
+8. Generate Maximum Vegetation Continuous Fields (VCF) for Forests in workrawdata. Maximum Potential Vegetation 
+   is updated to account for human plantation management.
+
+   tools/runcreateworkforestallmaxvcfrawdata worknamelist/CTSM53_FORESTMAX_ALL_VCF_generateallrawdata.txt
+
+   Check Vegetation Continuous Fields (VCF) netcdf files in worksurfdata - Optional
+
+   tools/runcreateworkvcfsurfdata worknamelist/CTSM53_FORESTMAX_FOREST_VCF_generatesurfdata.txt
+   tools/runcreateworkvcfsurfdata worknamelist/CTSM53_FORESTMAX_NONFOREST_VCF_generatesurfdata.txt
+   tools/runcreateworkvcfsurfdata worknamelist/CTSM53_FORESTMAX_RANGE_VCF_generatesurfdata.txt
+   
+9. Generate All of the raw Merge files for primf secdf primn secdn range for generating the LUH3 Descriptor files
+
+   tools/runcreateworkmergeallhistoricalrawdata worknamelist/CTSM53_LUH3_HIST_CMIP7_MERGE_generateallrawdata.txt
+
+   Check Merge netcdf files in worksurfdata for LUH3Type (PRIMF,SECDF,PRIMN,SECDN,RANGE) FractionType (TREEFRAC,HERBFRAC,BAREFRAC) - Optional
+
+   tools/runcreateworkmergesurfdata worknamelist/CTSM53_LUH3_HIST_CMIP7_MERGE_generatesurfdata.txt - Optional
+
+10. Generate All the VCF Tree, Herb and Grass PFT extrapolation files
+
+   tools/runcreateworkclm5extrapallvcfpftrawdata worknamelist/CTSM53_MODIS_CURRENT_EXTRAP_VCF_PFT_generateallrawdata.txt
+   
+   Check Extrapolation netcdf files in worksurfdata for PFT composition (TREE_EXTRAP,HERB_EXTRAP,GRASS_EXTRAP) - Optional
+
+   tools/runcreateworkclm5surfdata worknamelist/CTSM53_MODIS_CURRENT_EXTRAP_TREE_VCF_PFT_generatesurfdata.txt
+   tools/runcreateworkclm5surfdata worknamelist/CTSM53_MODIS_CURRENT_EXTRAP_HERB_VCF_PFT_generatesurfdata.txt
+   tools/runcreateworkclm5surfdata worknamelist/CTSM53_MODIS_CURRENT_EXTRAP_GRASS_VCF_PFT_generatesurfdata.txt
+   
+11. Generate All of the raw LUH3 component PFT Descriptor files for PRIMF SECDF PRIMN SECDN RANGE PASTR for a timeseries 
+
+   Generate the Descriptor files in rawdata:
+   tools/runcreateluh3descprimfrawdata luh3descnamelist/CTSM53_LUH3_HIST_CMIP7_DESC_PRIMF_PFT_generateallrawdata.txt
+   tools/runcreateluh3descsecdfrawdata luh3descnamelist/CTSM53_LUH3_HIST_CMIP7_DESC_SECDF_PFT_generateallrawdata.txt
+   tools/runcreateluh3descprimnrawdata luh3descnamelist/CTSM53_LUH3_HIST_CMIP7_DESC_PRIMN_PFT_generateallrawdata.txt
+   tools/runcreateluh3descsecdnrawdata luh3descnamelist/CTSM53_LUH3_HIST_CMIP7_DESC_SECDN_PFT_generateallrawdata.txt
+   tools/runcreateluh3descrangerawdata luh3descnamelist/CTSM53_LUH3_HIST_CMIP7_DESC_RANGE_PFT_generateallrawdata.txt
+   tools/runcreateluh3descpastrrawdata luh3descnamelist/CTSM53_LUH3_HIST_CMIP7_DESC_PASTR_PFT_generateallrawdata.txt
+   
+   Generate the Descriptor files in surfdata:
+   tools/runcreateluh3descpftsurfdata luh3descnamelist/CTSM53_LUH3_HIST_CMIP7_DESC_PRIMF_PFT_generatesurfdata.txt
+   tools/runcreateluh3descpftsurfdata luh3descnamelist/CTSM53_LUH3_HIST_CMIP7_DESC_SECDF_PFT_generatesurfdata.txt
+   tools/runcreateluh3descpftsurfdata luh3descnamelist/CTSM53_LUH3_HIST_CMIP7_DESC_PRIMN_PFT_generatesurfdata.txt
+   tools/runcreateluh3descpftsurfdata luh3descnamelist/CTSM53_LUH3_HIST_CMIP7_DESC_SECDN_PFT_generatesurfdata.txt
+   tools/runcreateluh3descpftsurfdata luh3descnamelist/CTSM53_LUH3_HIST_CMIP7_DESC_RANGE_PFT_generatesurfdata.txt
+   tools/runcreateluh3descpftsurfdata luh3descnamelist/CTSM53_LUH3_HIST_CMIP7_DESC_PASTR_PFT_generatesurfdata.txt
+   
+12. Generate All of the raw LUH3 component CFT Descriptor files for c3ann c4ann c3per c4per c3nfx for a timeseries 
+
+   Generate the Descriptor files in rawdata:
+   tools/runcreateluh3descc3annrawdata luh3descnamelist/CTSM53_LUH3_HIST_CMIP7_DESC_C3ANN_CFT_generateallrawdata.txt
+   tools/runcreateluh3descc4annrawdata luh3descnamelist/CTSM53_LUH3_HIST_CMIP7_DESC_C4ANN_CFT_generateallrawdata.txt
+   tools/runcreateluh3descc3perrawdata luh3descnamelist/CTSM53_LUH3_HIST_CMIP7_DESC_C3PER_CFT_generateallrawdata.txt
+   tools/runcreateluh3descc4perrawdata luh3descnamelist/CTSM53_LUH3_HIST_CMIP7_DESC_C4PER_CFT_generateallrawdata.txt
+   tools/runcreateluh3descc3nfxrawdata luh3descnamelist/CTSM53_LUH3_HIST_CMIP7_DESC_C3NFX_CFT_generateallrawdata.txt
+
+   Generate the Descriptor files in surfdata:
+   tools/runcreateluh3desccftsurfdata luh3descnamelist/CTSM53_LUH3_HIST_CMIP7_DESC_C3ANN_CFT_generatesurfdata.txt
+   tools/runcreateluh3desccftsurfdata luh3descnamelist/CTSM53_LUH3_HIST_CMIP7_DESC_C4ANN_CFT_generatesurfdata.txt
+   tools/runcreateluh3desccftsurfdata luh3descnamelist/CTSM53_LUH3_HIST_CMIP7_DESC_C3PER_CFT_generatesurfdata.txt
+   tools/runcreateluh3desccftsurfdata luh3descnamelist/CTSM53_LUH3_HIST_CMIP7_DESC_C4PER_CFT_generatesurfdata.txt
+   tools/runcreateluh3desccftsurfdata luh3descnamelist/CTSM53_LUH3_HIST_CMIP7_DESC_C3NFX_CFT_generatesurfdata.txt
+
+13. Generate All the raw LAI and Soil Color files for a timeseries these need to already exist as raw data for the timeseries
+
+   tools/runcreatetimeseriesclm5surfdata timeseriesnamelist/CTSM53_MODIS_CURRENT_generatesurfdata.txt
+   tools/runcreatetimeseriesclm5pftlaisurfdata timeseriesnamelist/CTSM53_MODIS_CURRENT_PFT_LAI_generatesurfdata.txt
+   tools/runcreatetimeseriesclm5soilcolorsurfdata timeseriesnamelist/CTSM53_MODIS_CURRENT_SOIL_COLOR_generatesurfdata.txt
+   
+Future SSP Time Series Descriptor File Generation - Assumes that Historical Descriptor Files have been generated.
+
+1. Generate Secondary Forest Merge File to account for Re/Afforestation using FORESTMAX plantation potential PFT values.
+
+   tools/runcreateworkmergeallssprawdata worknamelist/CTSM53_LUH3_SSP119_CMIP7_MERGE_generateallrawdata.txt
+   tools/runcreateworkmergeallssprawdata worknamelist/CTSM53_LUH3_SSP126_CMIP7_MERGE_generateallrawdata.txt
+   tools/runcreateworkmergeallssprawdata worknamelist/CTSM53_LUH3_SSP245_CMIP7_MERGE_generateallrawdata.txt
+   tools/runcreateworkmergeallssprawdata worknamelist/CTSM53_LUH3_SSP370_CMIP7_MERGE_generateallrawdata.txt
+   tools/runcreateworkmergeallssprawdata worknamelist/CTSM53_LUH3_SSP460_CMIP7_MERGE_generateallrawdata.txt
+   tools/runcreateworkmergeallssprawdata worknamelist/CTSM53_LUH3_SSP585_CMIP7_MERGE_generateallrawdata.txt
+
+   Check Merge netcdf files in worksurfdata for LUH3Type (SECDF) FractionType (TREEFRAC,HERBFRAC,BAREFRAC) - Optional
+
+   tools/runcreateworkmergesurfdata worknamelist/CTSM53_LUH3_SSP119_CMIP7_MERGE_generatesurfdata.txt
+   tools/runcreateworkmergesurfdata worknamelist/CTSM53_LUH3_SSP126_CMIP7_MERGE_generatesurfdata.txt
+   tools/runcreateworkmergesurfdata worknamelist/CTSM53_LUH3_SSP245_CMIP7_MERGE_generatesurfdata.txt
+   tools/runcreateworkmergesurfdata worknamelist/CTSM53_LUH3_SSP370_CMIP7_MERGE_generatesurfdata.txt
+   tools/runcreateworkmergesurfdata worknamelist/CTSM53_LUH3_SSP460_CMIP7_MERGE_generatesurfdata.txt
+   tools/runcreateworkmergesurfdata worknamelist/CTSM53_LUH3_SSP585_CMIP7_MERGE_generatesurfdata.txt
+   
+2. Generate Secondary Forest Descriptor File to account for Re/Afforestation using FORESTMAX plantation potential PFT values.
+
+   Generate the Descriptor files in rawdata:
+   tools/runcreateluh3descsecdfrawdata luh3descnamelist/CTSM53_LUH3_SSP119_CMIP7_DESC_SECDF_PFT_generateallrawdata.txt
+   tools/runcreateluh3descsecdfrawdata luh3descnamelist/CTSM53_LUH3_SSP126_CMIP7_DESC_SECDF_PFT_generateallrawdata.txt
+   tools/runcreateluh3descsecdfrawdata luh3descnamelist/CTSM53_LUH3_SSP245_CMIP7_DESC_SECDF_PFT_generateallrawdata.txt
+   tools/runcreateluh3descsecdfrawdata luh3descnamelist/CTSM53_LUH3_SSP370_CMIP7_DESC_SECDF_PFT_generateallrawdata.txt
+   tools/runcreateluh3descsecdfrawdata luh3descnamelist/CTSM53_LUH3_SSP460_CMIP7_DESC_SECDF_PFT_generateallrawdata.txt
+   tools/runcreateluh3descsecdfrawdata luh3descnamelist/CTSM53_LUH3_SSP585_CMIP7_DESC_SECDF_PFT_generateallrawdata.txt
+
+   Generate the Descriptor files in surfdata:
+   tools/runcreateluh3descpftsurfdata luh3descnamelist/CTSM53_LUH3_SSP119_CMIP7_DESC_SECDF_PFT_generatesurfdata.txt
+   tools/runcreateluh3descpftsurfdata luh3descnamelist/CTSM53_LUH3_SSP126_CMIP7_DESC_SECDF_PFT_generatesurfdata.txt
+   tools/runcreateluh3descpftsurfdata luh3descnamelist/CTSM53_LUH3_SSP245_CMIP7_DESC_SECDF_PFT_generatesurfdata.txt
+   tools/runcreateluh3descpftsurfdata luh3descnamelist/CTSM53_LUH3_SSP370_CMIP7_DESC_SECDF_PFT_generatesurfdata.txt
+   tools/runcreateluh3descpftsurfdata luh3descnamelist/CTSM53_LUH3_SSP460_CMIP7_DESC_SECDF_PFT_generatesurfdata.txt
+   tools/runcreateluh3descpftsurfdata luh3descnamelist/CTSM53_LUH3_SSP585_CMIP7_DESC_SECDF_PFT_generatesurfdata.txt

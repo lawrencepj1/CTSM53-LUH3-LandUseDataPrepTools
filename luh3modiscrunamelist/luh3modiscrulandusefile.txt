@@ -1,0 +1,9 @@
+forest     2 primf secdf                                                              2 primf secdf
+nonforest  2 primn secdn                                                              3 primn secdn range
+primf      1 primf                                                                    2 primf secdf
+secdf      1 secdf                                                                    2 primf secdf
+primn      1 primn                                                                    3 primn secdn range
+secdn      1 secdn                                                                    3 primn secdn range
+range      1 range                                                                    3 primn secdn range
+allveg     5 primf secdf primn secdn range                                            5 primf secdf primn secdn range
+allland   12 primf secdf primn secdn c3ann c4ann c3per c4per c3nfx pastr range urban 12 primf secdf primn secdn c3ann c4ann c3per c4per c3nfx pastr range urban

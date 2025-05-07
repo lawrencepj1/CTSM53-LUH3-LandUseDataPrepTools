@@ -1,0 +1,21 @@
+
+if [ ${#} -ne 1 ]
+then
+    echo "Usage: runcreateluh3descrangerawdata luh3descrangepftnamelistfile"
+    exit
+fi
+
+if [ -f ./ctsm53landuseprepconfig ]; 
+then
+    source ./ctsm53landuseprepconfig
+fi
+
+if [ -f ../ctsm53landuseprepconfig ]; 
+then
+    source ../ctsm53landuseprepconfig
+fi
+
+luh3descrangepftnamelistfile=${1}
+
+${bindir}createalldescrangeLUH3CTSM53Deg025bin ${luh3descrawfile} ${luh3descrawdir} ${timeseriesrawfile} ${timeseriesrawdir} ${workrawfile} ${workrawdir} ${luh3descrangepftnamelistfile}
+

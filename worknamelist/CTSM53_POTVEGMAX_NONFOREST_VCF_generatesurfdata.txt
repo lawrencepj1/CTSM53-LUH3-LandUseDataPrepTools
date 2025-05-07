@@ -1,0 +1,7 @@
+author                    Peter Lawrence, lawrence@ucar.edu, NCAR, Terrestrial Sciences Section 
+currentvcfname            CTSM53_POTVEGMAX_NONFOREST_VCF
+worksurfoutput            CTSM53_POTVEGMAX
+worksurfoutputname        CTSM53_POTVEGMAX_NONFOREST_VCF_2005_deg025.nc
+workrawinput              CTSM53_POTVEGMAX
+workrawinputname          NONFOREST_VCF_GEOG_DEG025
+workrawinputyear          2005

@@ -1,0 +1,45 @@
+
+if [ ${#} -ne 2 ]
+then
+    echo "Usage: runcreateluh3modiscruclimatevegetationrefittedlutfile experimentname yearname"
+    exit
+fi
+
+if [ -f ./ctsm53landuseprepconfig ]; 
+then
+    source ./ctsm53landuseprepconfig
+fi
+
+if [ -f ../ctsm53landuseprepconfig ]; 
+then
+    source ../ctsm53landuseprepconfig
+fi
+
+experimentname=${1}
+yearname=${2}
+
+pft1name="forest.PCT_TREE"
+pft2name="forest.PCT_HERB"
+pft3name="forest.PCT_BARE"
+pft4name="nonforest.PCT_TREE"
+pft5name="nonforest.PCT_HERB"
+pft6name="nonforest.PCT_BARE"
+pft7name="range.PCT_TREE"
+pft8name="range.PCT_HERB"
+pft9name="range.PCT_BARE"
+
+processedannualhome="${luh3modiscrurawdir}/${experimentname}/"
+
+pft1filename="${processedannualhome}${experimentname}.${pft1name}.globalclimatepct.${yearname}"
+pft2filename="${processedannualhome}${experimentname}.${pft2name}.globalclimatepct.${yearname}"
+pft3filename="${processedannualhome}${experimentname}.${pft3name}.globalclimatepct.${yearname}"
+pft4filename="${processedannualhome}${experimentname}.${pft4name}.globalclimatepct.${yearname}"
+pft5filename="${processedannualhome}${experimentname}.${pft5name}.globalclimatepct.${yearname}"
+pft6filename="${processedannualhome}${experimentname}.${pft6name}.globalclimatepct.${yearname}"
+pft7filename="${processedannualhome}${experimentname}.${pft7name}.globalclimatepct.${yearname}"
+pft8filename="${processedannualhome}${experimentname}.${pft8name}.globalclimatepct.${yearname}"
+pft9filename="${processedannualhome}${experimentname}.${pft9name}.globalclimatepct.${yearname}"
+
+# module load lang/python/2.7.14
+
+python ${scriptdir}createluh3modiscruclimatevegetationfinallutfile.py ${pft1filename} ${pft2filename} ${pft3filename} ${pft4filename} ${pft5filename} ${pft6filename} ${pft7filename} ${pft8filename} ${pft9filename}

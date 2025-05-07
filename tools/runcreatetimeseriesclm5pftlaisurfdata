@@ -1,0 +1,20 @@
+
+if [ ${#} -ne 1 ]
+then
+    echo "Usage: runcreatetimesseriesclm5pftlaisurfdata timesseriesdescpftlainamelistfile"
+    exit
+fi
+
+if [ -f ./ctsm53landuseprepconfig ]; 
+then
+    source ./ctsm53landuseprepconfig
+fi
+
+if [ -f ../ctsm53landuseprepconfig ]; 
+then
+    source ../ctsm53landuseprepconfig
+fi
+
+timesseriesdescpftlainamelistfile=${1}
+
+python ${scriptdir}createtimeseriespftlaisurfdata.py ${timesseriesdescpftlainamelistfile} ${timeseriesrawfile} ${timeseriesrawdir} ${regionfile} ${timeseriessurffile} ${timeseriessurfdir}

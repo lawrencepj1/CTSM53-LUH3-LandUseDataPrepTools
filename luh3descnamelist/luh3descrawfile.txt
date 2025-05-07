@@ -1,0 +1,7 @@
+CTSM53_LUH3_HIST_CMIP7        <luh3descrawdir>     1850   2023
+CTSM53_LUH3_SSP119_CMIP7      <luh3descrawdir>     2023   2100
+CTSM53_LUH3_SSP126_CMIP7      <luh3descrawdir>     2023   2100
+CTSM53_LUH3_SSP245_CMIP7      <luh3descrawdir>     2023   2100
+CTSM53_LUH3_SSP370_CMIP7      <luh3descrawdir>     2023   2100
+CTSM53_LUH3_SSP460_CMIP7      <luh3descrawdir>     2023   2100
+CTSM53_LUH3_SSP585_CMIP7      <luh3descrawdir>     2023   2100

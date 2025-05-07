@@ -1,0 +1,37 @@
+
+if [ ${#} -ne 10 ]
+then
+    echo "Usage: runcreateluh3modiscruclimatevegetationpotentiallutfile experimentname yearname landusename pftname landuse1name landuse1weight landuse2name landuse2weight landuse3name landuse3weight"
+    exit
+fi
+
+if [ -f ./ctsm53landuseprepconfig ]; 
+then
+    source ./ctsm53landuseprepconfig
+fi
+
+if [ -f ../ctsm53landuseprepconfig ]; 
+then
+    source ../ctsm53landuseprepconfig
+fi
+
+experimentname=${1}
+yearname=${2}
+landusename=${3}
+pftname=${4}
+landuse1name=${5}
+landuse1weight=${6}
+landuse2name=${7}
+landuse2weight=${8}
+landuse3name=${9}
+landuse3weight=${10}
+
+processedannualhome="${luh3modiscrurawdir}/${experimentname}/"
+
+landuse1filename="${processedannualhome}${experimentname}.${landuse1name}.globalclimatepct.${yearname}.data.csv"
+landuse2filename="${processedannualhome}${experimentname}.${landuse2name}.globalclimatepct.${yearname}.data.csv"
+landuse3filename="${processedannualhome}${experimentname}.${landuse3name}.globalclimatepct.${yearname}.data.csv"
+landuseallfilename="${processedannualhome}${experimentname}.allland.PCT_ALL.globalclimatepct.${yearname}.data.csv"
+outputfilename="${processedannualhome}${experimentname}.${landusename}.${pftname}.globalclimatepct.${yearname}.potentiallut.csv"
+
+python ${scriptdir}createluh3modiscruclimatevegetationpotentiallutfile.py ${landuse1filename} ${landuse1weight} ${landuse2filename} ${landuse2weight} ${landuse3filename} ${landuse3weight} ${landuseallfilename} ${outputfilename}

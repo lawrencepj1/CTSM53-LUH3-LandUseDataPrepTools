@@ -1,0 +1,161 @@
+#!/bin/sh
+
+if [ ${#} -ne 2 ]
+then
+    echo "Usage: runcreateluh3moidscruclimatevegetationluhtfiles luh3modiscruexperimentname luh3modiscruyearname"
+    exit
+fi
+
+if [ -f ./ctsm53landuseprepconfig ]; 
+then
+    source ./ctsm53landuseprepconfig
+fi
+
+if [ -f ../ctsm53landuseprepconfig ]; 
+then
+    source ../ctsm53landuseprepconfig
+fi
+
+luh3modiscruexperimentname=${1}
+luh3modiscruyearname=${2}
+luh3modiscruexperimentdir="${luh3modiscrurawdir}${luh3modiscruexperimentname}"
+
+if [ -d ${luh3modiscruexperimentdir} ]; 
+then
+    echo "Found Experiment Directory ${luh3modiscruexperimentdir}"
+else
+    echo "Experiment Directory Not Found ${luh3modiscruexperimentdir}"
+    exit
+fi
+
+# 1. Generate the raw lut files for all LUH2 classes and all PFT groups
+
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} allland PCT_ALL
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} allveg PCT_ALL
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} forest PCT_ALL
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} nonforest PCT_ALL
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} primf PCT_ALL
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} secdf PCT_ALL
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} primn PCT_ALL
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} secdn PCT_ALL
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} range PCT_ALL
+
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} allland PCT_TREE
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} allveg PCT_TREE
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} forest PCT_TREE
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} nonforest PCT_TREE
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} primf PCT_TREE
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} secdf PCT_TREE
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} primn PCT_TREE
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} secdn PCT_TREE
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} range PCT_TREE
+
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} allland PCT_GRASS
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} allveg PCT_GRASS
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} forest PCT_GRASS
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} nonforest PCT_GRASS
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} primf PCT_GRASS
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} secdf PCT_GRASS
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} primn PCT_GRASS
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} secdn PCT_GRASS
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} range PCT_GRASS
+
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} allland PCT_SHRUB
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} allveg PCT_SHRUB
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} forest PCT_SHRUB
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} nonforest PCT_SHRUB
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} primf PCT_SHRUB
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} secdf PCT_SHRUB
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} primn PCT_SHRUB
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} secdn PCT_SHRUB
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} range PCT_SHRUB
+
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} allland PCT_HERB
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} allveg PCT_HERB
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} forest PCT_HERB
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} nonforest PCT_HERB
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} primf PCT_HERB
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} secdf PCT_HERB
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} primn PCT_HERB
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} secdn PCT_HERB
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} range PCT_HERB
+
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} allland PCT_BARE
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} allveg PCT_BARE
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} forest PCT_BARE
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} nonforest PCT_BARE
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} primf PCT_BARE
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} secdf PCT_BARE
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} primn PCT_BARE
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} secdn PCT_BARE
+${toolsdir}/runcreateluh3modiscruclimatevegetationrawlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} range PCT_BARE
+
+# 2. Generate the potential lut files for all LUH2 classes and all PFT groups
+
+${toolsdir}/runcreateluh3modiscruclimatevegetationpotentiallutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} allveg PCT_TREE allveg.PCT_TREE 1.0 allveg.PCT_TREE 1.0 allveg.PCT_TREE 1.0
+${toolsdir}/runcreateluh3modiscruclimatevegetationpotentiallutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} forest PCT_TREE forest.PCT_TREE 1.2 allveg.PCT_TREE 0.8 allveg.PCT_TREE 0.8
+${toolsdir}/runcreateluh3modiscruclimatevegetationpotentiallutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} primf PCT_TREE primf.PCT_TREE 1.2 secdf.PCT_TREE 1.1 allveg.PCT_TREE 0.9
+${toolsdir}/runcreateluh3modiscruclimatevegetationpotentiallutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} secdf PCT_TREE secdf.PCT_TREE 1.0 primf.PCT_TREE 1.0 allveg.PCT_TREE 0.9
+${toolsdir}/runcreateluh3modiscruclimatevegetationpotentiallutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} nonforest PCT_TREE nonforest.PCT_TREE 0.9 forest.PCT_TREE 0.6 allveg.PCT_TREE 0.2
+${toolsdir}/runcreateluh3modiscruclimatevegetationpotentiallutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} primn PCT_TREE primn.PCT_TREE 1.0 secdn.PCT_TREE 1.0 allveg.PCT_TREE 0.4
+${toolsdir}/runcreateluh3modiscruclimatevegetationpotentiallutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} secdn PCT_TREE secdn.PCT_TREE 1.0 secdn.PCT_TREE 1.0 allveg.PCT_TREE 0.4
+${toolsdir}/runcreateluh3modiscruclimatevegetationpotentiallutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} range PCT_TREE range.PCT_TREE 0.9 allveg.PCT_TREE 0.2 allveg.PCT_TREE 0.2
+
+${toolsdir}/runcreateluh3modiscruclimatevegetationpotentiallutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} allveg PCT_HERB allveg.PCT_HERB 1.0 forest.PCT_HERB 1.0 nonforest.PCT_HERB 1.0
+${toolsdir}/runcreateluh3modiscruclimatevegetationpotentiallutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} forest PCT_HERB forest.PCT_HERB 1.0 allveg.PCT_HERB 0.6 allveg.PCT_HERB 0.6
+${toolsdir}/runcreateluh3modiscruclimatevegetationpotentiallutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} primf PCT_HERB primf.PCT_HERB 1.0 secdf.PCT_HERB 1.0 allveg.PCT_HERB 0.6
+${toolsdir}/runcreateluh3modiscruclimatevegetationpotentiallutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} secdf PCT_HERB secdf.PCT_HERB 1.0 secdf.PCT_HERB 1.0 allveg.PCT_HERB 0.6
+${toolsdir}/runcreateluh3modiscruclimatevegetationpotentiallutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} nonforest PCT_HERB nonforest.PCT_HERB 1.4 allveg.PCT_TREE 0.6 allveg.PCT_TREE 0.6
+${toolsdir}/runcreateluh3modiscruclimatevegetationpotentiallutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} primn PCT_HERB primn.PCT_HERB 1.2 secdn.PCT_HERB 1.0 allveg.PCT_HERB 1.0
+${toolsdir}/runcreateluh3modiscruclimatevegetationpotentiallutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} secdn PCT_HERB secdn.PCT_HERB 1.2 primn.PCT_HERB 1.0 allveg.PCT_HERB 1.0
+${toolsdir}/runcreateluh3modiscruclimatevegetationpotentiallutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} range PCT_HERB range.PCT_HERB 1.4 nonforest.PCT_HERB 1.4 allveg.PCT_TREE 0.6
+
+${toolsdir}/runcreateluh3modiscruclimatevegetationpotentiallutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} allveg PCT_BARE allveg.PCT_BARE 1.0 allveg.PCT_BARE 1.0 allveg.PCT_BARE 1.0
+${toolsdir}/runcreateluh3modiscruclimatevegetationpotentiallutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} forest PCT_BARE forest.PCT_BARE 1.0 allveg.PCT_BARE 1.0 allveg.PCT_BARE 1.0
+${toolsdir}/runcreateluh3modiscruclimatevegetationpotentiallutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} primf PCT_BARE primf.PCT_BARE 1.0 forest.PCT_BARE 1.0 allveg.PCT_BARE 1.0
+${toolsdir}/runcreateluh3modiscruclimatevegetationpotentiallutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} secdf PCT_BARE secdf.PCT_BARE 1.0 forest.PCT_BARE 1.0 allveg.PCT_BARE 1.0
+${toolsdir}/runcreateluh3modiscruclimatevegetationpotentiallutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} nonforest PCT_BARE nonforest.PCT_BARE 1.0 allveg.PCT_BARE 1.0 allveg.PCT_BARE 1.0
+${toolsdir}/runcreateluh3modiscruclimatevegetationpotentiallutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} primn PCT_BARE primn.PCT_BARE 1.0 nonforest.PCT_BARE 1.0 allveg.PCT_BARE 1.0
+${toolsdir}/runcreateluh3modiscruclimatevegetationpotentiallutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} secdn PCT_BARE secdn.PCT_BARE 1.0 nonforest.PCT_BARE 1.0 allveg.PCT_BARE 1.0
+${toolsdir}/runcreateluh3modiscruclimatevegetationpotentiallutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} range PCT_BARE range.PCT_BARE 1.0 nonforest.PCT_BARE 1.0 allveg.PCT_BARE 1.0
+
+# 3. Generate the potential normalized lut files for all LUH2 classes and all PFT groups
+
+${toolsdir}/runcreateluh3modiscruclimatevegetationnormalizedlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} allveg.PCT_TREE 0 allveg.PCT_TREE allveg.PCT_HERB 0 allveg.PCT_HERB allveg.PCT_BARE 1 allveg.PCT_BARE 
+${toolsdir}/runcreateluh3modiscruclimatevegetationnormalizedlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} forest.PCT_BARE 1 forest.PCT_BARE forest.PCT_TREE 0 forest.PCT_TREE forest.PCT_HERB 0 forest.PCT_HERB 
+${toolsdir}/runcreateluh3modiscruclimatevegetationnormalizedlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} primf.PCT_TREE 0 primf.PCT_TREE primf.PCT_HERB 0 primf.PCT_HERB primf.PCT_BARE 1 primf.PCT_BARE 
+${toolsdir}/runcreateluh3modiscruclimatevegetationnormalizedlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} secdf.PCT_TREE 0 secdf.PCT_TREE secdf.PCT_HERB 0 secdf.PCT_HERB secdf.PCT_BARE 1 secdf.PCT_BARE 
+${toolsdir}/runcreateluh3modiscruclimatevegetationnormalizedlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} nonforest.PCT_BARE 1 nonforest.PCT_BARE nonforest.PCT_TREE 0 nonforest.PCT_TREE nonforest.PCT_HERB 0 nonforest.PCT_HERB 
+${toolsdir}/runcreateluh3modiscruclimatevegetationnormalizedlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} primn.PCT_HERB 0 primn.PCT_HERB primn.PCT_TREE 0 primn.PCT_TREE primn.PCT_BARE 1 primn.PCT_BARE 
+${toolsdir}/runcreateluh3modiscruclimatevegetationnormalizedlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} secdn.PCT_HERB 0 secdn.PCT_HERB secdn.PCT_TREE 0 secdn.PCT_TREE secdn.PCT_BARE 1 secdn.PCT_BARE 
+${toolsdir}/runcreateluh3modiscruclimatevegetationnormalizedlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} range.PCT_BARE 1 range.PCT_BARE range.PCT_TREE 0 range.PCT_TREE range.PCT_HERB 0 range.PCT_HERB 
+
+# 4. Generate the potential refitted lut files for all LUH2 classes and all PFT groups
+
+${toolsdir}/runcreateluh3modiscruclimatevegetationrefittedlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} allveg.PCT_TREE 0 allveg.PCT_TREE allveg.PCT_HERB 0 allveg.PCT_HERB allveg.PCT_BARE 1 allveg.PCT_BARE 
+${toolsdir}/runcreateluh3modiscruclimatevegetationrefittedlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} forest.PCT_BARE 1 forest.PCT_BARE forest.PCT_TREE 0 forest.PCT_TREE forest.PCT_HERB 0 forest.PCT_HERB 
+${toolsdir}/runcreateluh3modiscruclimatevegetationrefittedlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} primf.PCT_TREE 0 primf.PCT_TREE primf.PCT_HERB 0 primf.PCT_HERB primf.PCT_BARE 1 primf.PCT_BARE 
+${toolsdir}/runcreateluh3modiscruclimatevegetationrefittedlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} secdf.PCT_TREE 0 secdf.PCT_TREE secdf.PCT_HERB 0 secdf.PCT_HERB secdf.PCT_BARE 1 secdf.PCT_BARE 
+${toolsdir}/runcreateluh3modiscruclimatevegetationrefittedlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} nonforest.PCT_BARE 1 nonforest.PCT_BARE nonforest.PCT_TREE 0 nonforest.PCT_TREE nonforest.PCT_HERB 0 nonforest.PCT_HERB 
+${toolsdir}/runcreateluh3modiscruclimatevegetationrefittedlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} primn.PCT_HERB 0 primn.PCT_HERB primn.PCT_TREE 0 primn.PCT_TREE primn.PCT_BARE 1 primn.PCT_BARE 
+${toolsdir}/runcreateluh3modiscruclimatevegetationrefittedlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} secdn.PCT_HERB 0 secdn.PCT_HERB secdn.PCT_TREE 0 secdn.PCT_TREE secdn.PCT_BARE 1 secdn.PCT_BARE 
+${toolsdir}/runcreateluh3modiscruclimatevegetationrefittedlutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname} range.PCT_BARE 1 range.PCT_BARE range.PCT_TREE 0 range.PCT_TREE range.PCT_HERB 0 range.PCT_HERB 
+
+# 5. Generate the potential final lut files for all LUH2 classes and all PFT groups
+
+${toolsdir}/runcreateluh3modiscruclimatevegetationfinallutfile ${luh3modiscruexperimentname} ${luh3modiscruyearname}
+
+# 6. Copy final potential normalized lut files to the lut directory
+
+cp ${luh3modiscrurawdir}${luh3modiscruexperimentname}/${luh3modiscruexperimentname}.forest.PCT_TREE.globalclimatepct.${luh3modiscruyearname}.potentialfinal.txt ${luh3modiscrurawdir}${luh3modiscruexperimentname}/currentclimate.forest.PCT_TREE.txt
+cp ${luh3modiscrurawdir}${luh3modiscruexperimentname}/${luh3modiscruexperimentname}.forest.PCT_HERB.globalclimatepct.${luh3modiscruyearname}.potentialfinal.txt ${luh3modiscrurawdir}${luh3modiscruexperimentname}/currentclimate.forest.PCT_HERB.txt
+cp ${luh3modiscrurawdir}${luh3modiscruexperimentname}/${luh3modiscruexperimentname}.forest.PCT_BARE.globalclimatepct.${luh3modiscruyearname}.potentialfinal.txt ${luh3modiscrurawdir}${luh3modiscruexperimentname}/currentclimate.forest.PCT_BARE.txt
+
+cp ${luh3modiscrurawdir}${luh3modiscruexperimentname}/${luh3modiscruexperimentname}.nonforest.PCT_TREE.globalclimatepct.${luh3modiscruyearname}.potentialfinal.txt ${luh3modiscrurawdir}${luh3modiscruexperimentname}/currentclimate.nonforest.PCT_TREE.txt
+cp ${luh3modiscrurawdir}${luh3modiscruexperimentname}/${luh3modiscruexperimentname}.nonforest.PCT_HERB.globalclimatepct.${luh3modiscruyearname}.potentialfinal.txt ${luh3modiscrurawdir}${luh3modiscruexperimentname}/currentclimate.nonforest.PCT_HERB.txt
+cp ${luh3modiscrurawdir}${luh3modiscruexperimentname}/${luh3modiscruexperimentname}.nonforest.PCT_BARE.globalclimatepct.${luh3modiscruyearname}.potentialfinal.txt ${luh3modiscrurawdir}${luh3modiscruexperimentname}/currentclimate.nonforest.PCT_BARE.txt
+
+cp ${luh3modiscrurawdir}${luh3modiscruexperimentname}/${luh3modiscruexperimentname}.range.PCT_TREE.globalclimatepct.${luh3modiscruyearname}.potentialfinal.txt ${luh3modiscrurawdir}${luh3modiscruexperimentname}/currentclimate.range.PCT_TREE.txt
+cp ${luh3modiscrurawdir}${luh3modiscruexperimentname}/${luh3modiscruexperimentname}.range.PCT_HERB.globalclimatepct.${luh3modiscruyearname}.potentialfinal.txt ${luh3modiscrurawdir}${luh3modiscruexperimentname}/currentclimate.range.PCT_HERB.txt
+cp ${luh3modiscrurawdir}${luh3modiscruexperimentname}/${luh3modiscruexperimentname}.range.PCT_BARE.globalclimatepct.${luh3modiscruyearname}.potentialfinal.txt ${luh3modiscrurawdir}${luh3modiscruexperimentname}/currentclimate.range.PCT_BARE.txt
+

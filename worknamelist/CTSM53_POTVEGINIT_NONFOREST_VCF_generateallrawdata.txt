@@ -1,0 +1,12 @@
+author                          Peter Lawrence, lawrence@ucar.edu, NCAR, Terrestrial Sciences Section 
+potvegnonforestinitialvcfname   CTSM53_POTVEGINIT_NONFOREST_VCF
+workrawoutput                   CTSM53_POTVEGINIT
+workrawoutputname               NONFOREST_VCF_GEOG_DEG025
+workrawinput                    CTSM53_MODIS_CURRENT
+workrawinputname                CLM5_GEOG_DEG025
+workrawinputyear                2005
+clm5modisrawinput               CLM5_GEOG_DEG025
+clm5modisyear                   2005
+foresttreeclimatename           CURRENT_NONFOREST_PCT_TREE
+forestherbclimatename           CURRENT_NONFOREST_PCT_HERB
+forestbareclimatename           CURRENT_NONFOREST_PCT_BARE

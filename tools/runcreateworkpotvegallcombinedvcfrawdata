@@ -1,0 +1,20 @@
+
+if [ ${#} -ne 1 ]
+then
+    echo "Usage: runcreateluh2potvegallcombinedvcfrawfiles potvegallcombinedvcfnamelistfile"
+    exit
+fi
+
+if [ -f ./ctsm53landuseprepconfig ]; 
+then
+    source ./ctsm53landuseprepconfig
+fi
+
+if [ -f ../ctsm53landuseprepconfig ]; 
+then
+    source ../ctsm53landuseprepconfig
+fi
+
+potvegallcombinedvcfnamelistfile=${1}
+
+${bindir}createallpotvegvcfcombinedLUH3CTSM53Deg025bin ${timeseriesrawfile} ${timeseriesrawdir} ${workrawfile} ${workrawdir} ${potvegallcombinedvcfnamelistfile}

@@ -1,0 +1,8 @@
+author              Peter Lawrence, lawrence@ucar.edu, NCAR, Terrestrial Sciences Section 
+luh3name            LUH3_SSP585_CMIP7
+luh3surfoutput      LUH3_SSP585_CMIP7
+luh3rawinput        LUH3_SSP585_CMIP7_GEOG_DEG025
+clm5modisrawinput   CLM5_GEOG_DEG025
+luh3startyear       2023
+luh3endyear         2100
+clm5modisyear       CLIM

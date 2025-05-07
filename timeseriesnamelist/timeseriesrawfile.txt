@@ -1,0 +1,1 @@
+CLM5_GEOG_DEG025          <timeseriesrawdir>                 1961  2016

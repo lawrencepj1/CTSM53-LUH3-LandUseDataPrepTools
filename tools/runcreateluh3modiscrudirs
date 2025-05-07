@@ -1,0 +1,18 @@
+
+if [ -f ./ctsm53landuseprepconfig ]; 
+then
+    source ./ctsm53landuseprepconfig
+fi
+
+if [ -f ../ctsm53landuseprepconfig ]; 
+then
+    source ../ctsm53landuseprepconfig
+fi
+
+if [ -d ${luh3modiscrurawdir} ]; 
+then
+    echo "luh3modiscrurawdir Raw Directory ${luh3modiscrurawdir} Already Exists"
+else
+    mkdir ${luh3modiscrurawdir}
+    mkdir ${luh3modiscrurawdir}LUH3_MODIS_CRU_HIST_CMIP7
+fi

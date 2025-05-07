@@ -1,0 +1,32 @@
+ 0 REPLF 1.0  1.0  1.0   1.0   1.0  1.0  1.0  1.0  Generic_C3
+ 1 C4ANN 1.25 0.5  0.0   0.0   1.0  0.1  0.0  0.0  Temperate_Corn
+ 2 C3ANN 1.0  0.0  0.0   0.0   0.7  0.0  0.0  0.0  Spring_Wheat
+ 3 C3ANN 1.0  0.0  0.0   0.0   0.7  0.0  0.0  0.0  Winter_Wheat
+ 4 C3NFX 1.0  0.25 0.0   0.0   1.0  0.25 0.0  0.0  Temperate_Soybean
+ 5 C3ANN 1.0  0.0  0.0   0.0   0.65 0.0  0.0  0.0  Barley
+ 6 C3ANN 1.0  0.0  0.0   0.0   0.65 0.0  0.0  0.0  Winter_Barley
+ 7 C3ANN 1.0  0.0  0.0   0.0   0.75 0.0  0.0  0.0  Rye
+ 8 C3ANN 1.0  0.0  0.0   0.0   0.75 0.0  0.0  0.0  Winter_Rye
+ 9 C3ANN 1.0  0.0  0.0   0.0   0.75 0.0  0.0  0.0  Cassava
+10 C3PER 1.0  0.0  0.0   0.0   0.4  0.0  0.0  0.0  Citrus
+11 C3PER 1.0  0.0  0.0   0.0   0.7  0.0  0.0  0.0  Cocoa
+12 C3PER 1.0  0.0  0.0   0.0   0.45 0.0  0.0  0.0  Coffee
+13 C3ANN 1.0  0.0  0.0   0.0   0.8  0.0  0.0  0.0  Cotton
+14 C3PER 1.0  0.0  0.0   0.0   0.55 0.0  0.0  0.0  Datepalm
+15 C3ANN 1.0  1.0  0.0   0.0   1.0  1.0  0.0  0.0  Foddergrass
+16 C3PER 1.0  0.0  0.0   0.0   0.4  0.0  0.0  0.0  Grapes
+17 C3NFX 1.0  0.0  0.0   0.0   0.95 0.0  0.0  0.0  Groundnuts
+18 C4ANN 1.0  0.25 0.0   0.0   1.0  0.25 0.0  0.0  Millet
+19 C3PER 1.0  0.0  0.0   0.0   0.65 0.0  0.0  0.0  Oilpalm
+20 C3ANN 1.0  0.0  0.0   0.0   0.8  0.0  0.0  0.0  Potatoes
+21 C3NFX 1.0  0.0  0.0   0.0   0.85 0.0  0.0  0.0  Pulses
+22 C3ANN 1.0  0.0  0.0   0.0   1.0  0.0  0.0  0.0  Rapeseed
+23 C3ANN 1.5  1.0  0.25  0.0   1.0  1.0  0.25 0.0  Rice
+24 C4ANN 1.0  0.1  0.0   0.0   1.0  0.1  0.0  0.0  Sorghum
+25 C3ANN 1.0  0.0  0.0   0.0   0.85 0.0  0.0  0.0  Sugarbeet
+26 C4PER 1.0  1.0  1.0   0.0   1.0  0.25 0.1  0.0  Sugarcane
+27 C3ANN 1.0  0.0  0.0   0.0   0.65 0.0  0.0  0.0  Sunflower
+28 C4PER 0.0  0.0  0.0   0.0   0.0  0.0  0.0  0.0  Miscanthus
+29 C4PER 0.0  0.0  0.0   0.0   0.0  0.0  0.0  0.0  Switchgrass
+30 C4ANN 1.25 0.5  0.0   0.0   1.0  0.1  0.0  0.0  Tropical_Corn
+31 C3NFX 1.0  0.25 0.0   0.0   1.0  0.25 0.0  0.0  Tropical_Soybean

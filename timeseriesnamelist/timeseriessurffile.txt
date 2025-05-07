@@ -1,0 +1,1 @@
+CTSM53_MODIS_CURRENT    <timeseriessurfdir>    2005   2005

@@ -1,0 +1,8 @@
+author                    Peter Lawrence, lawrence@ucar.edu, NCAR, Terrestrial Sciences Section 
+currentvcfname            CTSM53_MODIS_CURRENT_VCF
+workrawoutput             CTSM53_MODIS_CURRENT
+workrawoutputname         VCF_GEOG_DEG025
+workrawinput              CTSM53_MODIS_CURRENT
+workrawinputname          CLM5_GEOG_DEG025
+clm5currentrawinput       CLM5_GEOG_DEG025
+clm5modisyear             2005

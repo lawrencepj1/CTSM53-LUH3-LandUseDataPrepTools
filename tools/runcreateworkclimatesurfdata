@@ -1,0 +1,20 @@
+
+if [ ${#} -ne 1 ]
+then
+    echo "Usage: runcreateclimatesurfdata climatenamelistfile"
+    exit
+fi
+
+if [ -f ./ctsm53landuseprepconfig ]; 
+then
+    source ./ctsm53landuseprepconfig
+fi
+
+if [ -f ../ctsm53landuseprepconfig ]; 
+then
+    source ../ctsm53landuseprepconfig
+fi
+
+climatenamelistfile=${1}
+
+python ${scriptdir}createworkclimatesurfdata.py ${climatenamelistfile} ${timeseriesrawfile} ${timeseriesrawdir} ${regionfile} ${worksurffile} ${worksurfdir}

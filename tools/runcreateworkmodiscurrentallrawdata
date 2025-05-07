@@ -1,0 +1,20 @@
+
+if [ ${#} -ne 1 ]
+then
+    echo "Usage: runcreateluh3modiscurrentallrawfiles workrawnamelistfile"
+    exit
+fi
+
+if [ -f ./ctsm53landuseprepconfig ]; 
+then
+    source ./ctsm53landuseprepconfig
+fi
+
+if [ -f ../ctsm53landuseprepconfig ]; 
+then
+    source ../ctsm53landuseprepconfig
+fi
+
+currentnamelistfile=${1}
+
+${bindir}createallcurrentLUH3CTSM53Deg025bin ${luh3rawfile} ${luh3rawdir} ${timeseriesrawfile} ${timeseriesrawdir} ${workrawfile} ${workrawdir} ${currentnamelistfile}

@@ -1,0 +1,12 @@
+author                    Peter Lawrence, lawrence@ucar.edu, NCAR, Terrestrial Sciences Section 
+futuremergename           CTSM53_LUH3_SSP460_CMIP7_MERGE
+futuremergeluh3types      SECDF        
+worksurfoutput            CTSM53_LUH3_SSP460_CMIP7
+worksurfoutputname        CTSM53_LUH3_SSP460_CMIP7_MERGE_2023_2100_deg025.nc
+clm5currentrawinput       CTSM53_MODIS_CURRENT
+clm5currentrawinputname   CLM5_GEOG_DEG025
+clm5currentrawinputyear   2005
+workrawinput              CTSM53_LUH3_SSP460_CMIP7
+workrawinputname          MERGE_GEOG_DEG025
+workrawinputstartyear     2023
+workrawinputendyear       2100

@@ -1,0 +1,25 @@
+
+if [ -f ./ctsm53landuseprepconfig ]; 
+then
+    source ./ctsm53landuseprepconfig
+fi
+
+if [ -f ../ctsm53landuseprepconfig ]; 
+then
+    source ../ctsm53landuseprepconfig
+fi
+
+if [ -d ${luh3surfdir} ]; 
+then
+    echo "LUH3 Surface Directory ${luh3surfdir} Already Exists"
+else
+    mkdir ${luh3surfdir}
+    mkdir ${luh3surfdir}LUH3_NOANTHRO_CMIP7
+    mkdir ${luh3surfdir}LUH3_HIST_CMIP7
+    mkdir ${luh3surfdir}LUH3_SSP119_CMIP7
+    mkdir ${luh3surfdir}LUH3_SSP126_CMIP7
+    mkdir ${luh3surfdir}LUH3_SSP245_CMIP7
+    mkdir ${luh3surfdir}LUH3_SSP370_CMIP7
+    mkdir ${luh3surfdir}LUH3_SSP460_CMIP7
+    mkdir ${luh3surfdir}LUH3_SSP585_CMIP7
+fi

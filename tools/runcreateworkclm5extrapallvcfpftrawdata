@@ -1,0 +1,20 @@
+
+if [ ${#} -ne 1 ]
+then
+    echo "Usage: runcreateluh2clm5extrapvcfrawdata extrapvcfpftnamelistfile"
+    exit
+fi
+
+if [ -f ./ctsm53landuseprepconfig ]; 
+then
+    source ./ctsm53landuseprepconfig
+fi
+
+if [ -f ../ctsm53landuseprepconfig ]; 
+then
+    source ../ctsm53landuseprepconfig
+fi
+
+extrapvcfpftnamelistfile=${1}
+
+${bindir}createallextrapvcfpftLUH3CTSM53Deg025bin ${timeseriesrawfile} ${timeseriesrawdir} ${workrawfile} ${workrawdir} ${extrapvcfpftnamelistfile}

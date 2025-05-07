@@ -1,0 +1,20 @@
+
+if [ ${#} -ne 1 ]
+then
+    echo "Usage: runcreateluh3potvegallscaledvcfrawfiles potvegallscaledvcfnamelistfile"
+    exit
+fi
+
+if [ -f ./ctsm53landuseprepconfig ]; 
+then
+    source ./ctsm53landuseprepconfig
+fi
+
+if [ -f ../ctsm53landuseprepconfig ]; 
+then
+    source ../ctsm53landuseprepconfig
+fi
+
+potvegallscaledvcfnamelistfile=${1}
+
+${bindir}createallpotvegvcfscaledLUH3CTSM53Deg025bin ${luh3rawfile} ${luh3rawdir} ${timeseriesrawfile} ${timeseriesrawdir} ${workrawfile} ${workrawdir} ${potvegallscaledvcfnamelistfile}

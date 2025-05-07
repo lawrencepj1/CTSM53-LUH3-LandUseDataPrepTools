@@ -1,0 +1,7 @@
+author                    Peter Lawrence, lawrence@ucar.edu, NCAR, Terrestrial Sciences Section 
+modiscurrentextrapname    CTSM53_MODIS_CURRENT_EXTRAP_GRASS
+worksurfoutput            CTSM53_MODIS_CURRENT
+worksurfoutputname        CTSM53_MODIS_CURRENT_EXTRAP_GRASS_2005_deg025.nc
+workrawinput              CTSM53_MODIS_CURRENT
+workrawinputname          GRASS_EXTRAP_GEOG_DEG025
+clm5modisyear             2005

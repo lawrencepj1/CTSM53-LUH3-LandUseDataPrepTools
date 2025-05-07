@@ -1,0 +1,39 @@
+
+if [ ${#} -ne 11 ]
+then
+    echo "Usage: runcreateluh3modiscruclimatevegetationnormalizedlutfile experimentname yearname pft1in pft1climatemask pft1out pft2in pft2climatemask pft2out pft3in pft3climatemask pft3out"
+    exit
+fi
+
+if [ -f ./ctsm53landuseprepconfig ]; 
+then
+    source ./ctsm53landuseprepconfig
+fi
+
+if [ -f ../ctsm53landuseprepconfig ]; 
+then
+    source ../ctsm53landuseprepconfig
+fi
+
+experimentname=${1}
+yearname=${2}
+pft1in=${3}
+pft1climatemask=${4}
+pft1out=${5}
+pft2in=${6}
+pft2climatemask=${7}
+pft2out=${8}
+pft3in=${9}
+pft3climatemask=${10}
+pft3out=${11}
+
+processedannualhome="${luh3modiscrurawdir}/${experimentname}/"
+
+pft1filename="${processedannualhome}${experimentname}.${pft1in}.globalclimatepct.${yearname}.potentiallut.csv"
+pft2filename="${processedannualhome}${experimentname}.${pft2in}.globalclimatepct.${yearname}.potentiallut.csv"
+pft3filename="${processedannualhome}${experimentname}.${pft3in}.globalclimatepct.${yearname}.potentiallut.csv"
+output1filename="${processedannualhome}${experimentname}.${pft1out}.globalclimatepct.${yearname}.potentialnormalized.csv"
+output2filename="${processedannualhome}${experimentname}.${pft2out}.globalclimatepct.${yearname}.potentialnormalized.csv"
+output3filename="${processedannualhome}${experimentname}.${pft3out}.globalclimatepct.${yearname}.potentialnormalized.csv"
+
+python ${scriptdir}createluh3modiscruclimatevegetationnormalizedlutfile.py ${pft1filename} ${pft1climatemask} ${pft2filename} ${pft2climatemask} ${pft3filename} ${pft3climatemask} ${output1filename} ${output2filename} ${output3filename} ${luh3modiscruclimatemask}

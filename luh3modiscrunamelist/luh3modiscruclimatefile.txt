@@ -1,0 +1,9 @@
+CURRENT_FOREST_PCT_TREE      <luh3modiscrurawdir>  LUH3_MODIS_CRU_HIST_CMIP7/currentclimate.forest.PCT_TREE.txt        2005   2005
+CURRENT_FOREST_PCT_HERB      <luh3modiscrurawdir>  LUH3_MODIS_CRU_HIST_CMIP7/currentclimate.forest.PCT_HERB.txt        2005   2005
+CURRENT_FOREST_PCT_BARE      <luh3modiscrurawdir>  LUH3_MODIS_CRU_HIST_CMIP7/currentclimate.forest.PCT_BARE.txt        2005   2005
+CURRENT_NONFOREST_PCT_TREE   <luh3modiscrurawdir>  LUH3_MODIS_CRU_HIST_CMIP7/currentclimate.nonforest.PCT_TREE.txt     2005   2005
+CURRENT_NONFOREST_PCT_HERB   <luh3modiscrurawdir>  LUH3_MODIS_CRU_HIST_CMIP7/currentclimate.nonforest.PCT_HERB.txt     2005   2005
+CURRENT_NONFOREST_PCT_BARE   <luh3modiscrurawdir>  LUH3_MODIS_CRU_HIST_CMIP7/currentclimate.nonforest.PCT_BARE.txt     2005   2005
+CURRENT_RANGE_PCT_TREE       <luh3modiscrurawdir>  LUH3_MODIS_CRU_HIST_CMIP7/currentclimate.range.PCT_TREE.txt         2005   2005
+CURRENT_RANGE_PCT_HERB       <luh3modiscrurawdir>  LUH3_MODIS_CRU_HIST_CMIP7/currentclimate.range.PCT_HERB.txt         2005   2005
+CURRENT_RANGE_PCT_BARE       <luh3modiscrurawdir>  LUH3_MODIS_CRU_HIST_CMIP7/currentclimate.range.PCT_BARE.txt         2005   2005

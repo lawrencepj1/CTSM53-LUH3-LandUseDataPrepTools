@@ -1,0 +1,23 @@
+author                               Peter Lawrence, lawrence@ucar.edu, NCAR, Terrestrial Sciences Section 
+luh3descallsecdfallpftname           CTSM53_LUH3_SSP460_CMIP7_DESC_SECDF_ALL_PFT
+luh3descrawpftoutput                 CTSM53_LUH3_SSP460_CMIP7
+luh3descrawpftoutputsecdfname        SECDF_DESC_GEOG_DEG025
+workrawclm5input                     CTSM53_MODIS_CURRENT
+workrawclm5inputname                 CLM5_GEOG_DEG025
+workrawclm5inputyear                 2005
+workrawpotvegmaxvcfinput             CTSM53_FORESTMAX
+workrawpotvegmaxvcfinputforestname   FOREST_VCF_GEOG_DEG025
+workrawpotvegmaxvcfinputyear         2005
+workrawscaledvcfinput                CTSM53_POTVEGSCALED
+workrawscaledvcfinputforestname      FOREST_VCF_GEOG_DEG025
+workrawscaledvcfinputyear            2005
+workrawextrappftinput                CTSM53_MODIS_CURRENT
+workrawextrappftinputtreename        TREE_EXTRAP_GEOG_DEG025
+workrawextrappftinputherbname        HERB_EXTRAP_GEOG_DEG025
+workrawextrappftinputyear            2005
+workrawmergeinput                    CTSM53_LUH3_SSP460_CMIP7
+workrawmergeinputname                MERGE_GEOG_DEG025
+workrawmergeinputstartyear           2023
+workrawmergeinputendyear             2100
+clm5modisrawinput                    CLM5_GEOG_DEG025
+clm5modisrawreferenceyear            2005

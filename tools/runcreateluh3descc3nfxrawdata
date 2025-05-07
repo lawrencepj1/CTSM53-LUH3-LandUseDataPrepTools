@@ -1,0 +1,21 @@
+
+if [ ${#} -ne 1 ]
+then
+    echo "Usage: runcreateluh3descc3nfxrawdata luh3descc3nfxpftnamelistfile"
+    exit
+fi
+
+if [ -f ./ctsm53landuseprepconfig ]; 
+then
+    source ./ctsm53landuseprepconfig
+fi
+
+if [ -f ../ctsm53landuseprepconfig ]; 
+then
+    source ../ctsm53landuseprepconfig
+fi
+
+luh3descc3nfxpftnamelistfile=${1}
+
+${bindir}createalldescc3nfxLUH3CTSM53Deg025bin ${luh3descrawfile} ${luh3descrawdir} ${timeseriesrawfile} ${timeseriesrawdir} ${workrawfile} ${workrawdir} ${luh3desccropparamfile} ${luh3descc3nfxpftnamelistfile}
+

@@ -1,0 +1,6 @@
+author                            Peter Lawrence, lawrence@ucar.edu, NCAR, Terrestrial Sciences Section 
+currenttimeseriessoilcolorname    CTSM53_MODIS_CURRENT_SOIL_COLOR
+timeseriessurfoutput              CTSM53_MODIS_CURRENT
+timeseriessurfoutputname          CTSM53_MODIS_CURRENT_SOIL_COLOR_2005_deg025.nc
+timeseriesrawinput                CLM5_GEOG_DEG025
+timeseriesrawinputyear            CLIM

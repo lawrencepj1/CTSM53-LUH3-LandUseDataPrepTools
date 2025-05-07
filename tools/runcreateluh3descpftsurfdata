@@ -1,0 +1,20 @@
+
+if [ ${#} -ne 1 ]
+then
+    echo "Usage: runcreateluh3descpftsurffile luh3descpftnamelistfile"
+    exit
+fi
+
+if [ -f ./ctsm53landuseprepconfig ]; 
+then
+    source ./ctsm53landuseprepconfig
+fi
+
+if [ -f ../ctsm53landuseprepconfig ]; 
+then
+    source ../ctsm53landuseprepconfig
+fi
+
+luh3descpftnamelistfile=${1}
+
+python ${scriptdir}createluh3descpftsurfdata.py ${luh3descpftnamelistfile} ${luh3descrawfile} ${luh3descrawdir} ${workrawfile} ${workrawdir} ${regionfile} ${luh3descsurffile} ${luh3descsurfdir}

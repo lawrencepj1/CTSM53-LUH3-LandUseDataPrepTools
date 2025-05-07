@@ -1,0 +1,22 @@
+
+if [ ${#} -ne 1 ]
+then
+    echo "Usage: runcreateworkmergeallssprawdata luh2allvcfmergenamelistfile"
+    exit
+fi
+
+if [ -f ./ctsm52landuseprepconfig ]; 
+then
+    source ./ctsm52landuseprepconfig
+fi
+
+if [ -f ../ctsm52landuseprepconfig ]; 
+then
+    source ../ctsm52landuseprepconfig
+fi
+
+luh2allvcfmergenamelistfile=${1}
+
+${bindir}createallmergesspLUH2CTSM52Deg025bin ${luh2rawfile} ${luh2rawdir} ${timeseriesrawfile} ${timeseriesrawdir} ${workrawfile} ${workrawdir} ${worksspmergefile} SECDFFRACTREE ${luh2allvcfmergenamelistfile}
+${bindir}createallmergesspLUH2CTSM52Deg025bin ${luh2rawfile} ${luh2rawdir} ${timeseriesrawfile} ${timeseriesrawdir} ${workrawfile} ${workrawdir} ${worksspmergefile} SECDFFRACHERB ${luh2allvcfmergenamelistfile}
+${bindir}createallmergesspLUH2CTSM52Deg025bin ${luh2rawfile} ${luh2rawdir} ${timeseriesrawfile} ${timeseriesrawdir} ${workrawfile} ${workrawdir} ${worksspmergefile} SECDFFRACBARE ${luh2allvcfmergenamelistfile}

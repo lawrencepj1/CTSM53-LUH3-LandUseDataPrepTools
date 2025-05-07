@@ -1,0 +1,12 @@
+author                               Peter Lawrence, lawrence@ucar.edu, NCAR, Terrestrial Sciences Section 
+luh3descallpastrallpftname           CTSM53_LUH3_HIST_CMIP7_DESC_PASTR_ALL_PFT
+luh3descrawpftoutput                 CTSM53_LUH3_HIST_CMIP7
+luh3descrawpftoutputpastrname        PASTR_DESC_GEOG_DEG025
+workrawclm5input                     CTSM53_MODIS_CURRENT
+workrawclm5inputname                 CLM5_GEOG_DEG025
+workrawclm5inputyear                 2005
+workrawextrappftinput                CTSM53_MODIS_CURRENT
+workrawextrappftinputgrassname       GRASS_EXTRAP_GEOG_DEG025
+workrawextrappftinputyear            2005
+clm5modisrawinput                    CLM5_GEOG_DEG025
+clm5modisrawreferenceyear            2005

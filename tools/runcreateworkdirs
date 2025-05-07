@@ -1,0 +1,79 @@
+
+if [ -f ./ctsm53landuseprepconfig ]; 
+then
+    source ./ctsm53landuseprepconfig
+fi
+
+if [ -f ../ctsm53landuseprepconfig ]; 
+then
+    source ../ctsm53landuseprepconfig
+fi
+
+if [ -d ${workrawdir} ]; 
+then
+    echo "Work Raw Directory ${workrawdir} Already Exists"
+else
+    mkdir ${workrawdir}
+    mkdir ${workrawdir}CTSM53_MODIS_CURRENT
+    mkdir ${workrawdir}CTSM53_MODIS_CURRENT/CLM5_GEOG_DEG025
+    mkdir ${workrawdir}CTSM53_MODIS_CURRENT/VCF_GEOG_DEG025
+    mkdir ${workrawdir}CTSM53_MODIS_CURRENT/TREE_EXTRAP_GEOG_DEG025
+    mkdir ${workrawdir}CTSM53_MODIS_CURRENT/HERB_EXTRAP_GEOG_DEG025
+    mkdir ${workrawdir}CTSM53_MODIS_CURRENT/GRASS_EXTRAP_GEOG_DEG025
+    mkdir ${workrawdir}CTSM53_POTVEGINIT
+    mkdir ${workrawdir}CTSM53_POTVEGINIT/FOREST_VCF_GEOG_DEG025
+    mkdir ${workrawdir}CTSM53_POTVEGINIT/NONFOREST_VCF_GEOG_DEG025
+    mkdir ${workrawdir}CTSM53_POTVEGINIT/RANGE_VCF_GEOG_DEG025
+    mkdir ${workrawdir}CTSM53_POTVEGCOMB
+    mkdir ${workrawdir}CTSM53_POTVEGCOMB/FOREST_VCF_GEOG_DEG025
+    mkdir ${workrawdir}CTSM53_POTVEGCOMB/NONFOREST_VCF_GEOG_DEG025
+    mkdir ${workrawdir}CTSM53_POTVEGCOMB/RANGE_VCF_GEOG_DEG025
+    mkdir ${workrawdir}CTSM53_POTVEGSCALED
+    mkdir ${workrawdir}CTSM53_POTVEGSCALED/FOREST_VCF_GEOG_DEG025
+    mkdir ${workrawdir}CTSM53_POTVEGSCALED/NONFOREST_VCF_GEOG_DEG025
+    mkdir ${workrawdir}CTSM53_POTVEGSCALED/RANGE_VCF_GEOG_DEG025
+    mkdir ${workrawdir}CTSM53_POTVEGMAX
+    mkdir ${workrawdir}CTSM53_POTVEGMAX/FOREST_VCF_GEOG_DEG025
+    mkdir ${workrawdir}CTSM53_POTVEGMAX/NONFOREST_VCF_GEOG_DEG025
+    mkdir ${workrawdir}CTSM53_POTVEGMAX/RANGE_VCF_GEOG_DEG025
+    mkdir ${workrawdir}CTSM53_FORESTMAX
+    mkdir ${workrawdir}CTSM53_FORESTMAX/FOREST_VCF_GEOG_DEG025
+    mkdir ${workrawdir}CTSM53_FORESTMAX/NONFOREST_VCF_GEOG_DEG025
+    mkdir ${workrawdir}CTSM53_FORESTMAX/RANGE_VCF_GEOG_DEG025
+    mkdir ${workrawdir}CTSM53_LUH3_HIST_CMIP7
+    mkdir ${workrawdir}CTSM53_LUH3_HIST_CMIP7/MERGE_GEOG_DEG025
+    mkdir ${workrawdir}CTSM53_LUH3_SSP119_CMIP7
+    mkdir ${workrawdir}CTSM53_LUH3_SSP119_CMIP7/MERGE_GEOG_DEG025
+    mkdir ${workrawdir}CTSM53_LUH3_SSP126_CMIP7
+    mkdir ${workrawdir}CTSM53_LUH3_SSP126_CMIP7/MERGE_GEOG_DEG025
+    mkdir ${workrawdir}CTSM53_LUH3_SSP245_CMIP7
+    mkdir ${workrawdir}CTSM53_LUH3_SSP245_CMIP7/MERGE_GEOG_DEG025
+    mkdir ${workrawdir}CTSM53_LUH3_SSP370_CMIP7
+    mkdir ${workrawdir}CTSM53_LUH3_SSP370_CMIP7/MERGE_GEOG_DEG025
+    mkdir ${workrawdir}CTSM53_LUH3_SSP460_CMIP7
+    mkdir ${workrawdir}CTSM53_LUH3_SSP460_CMIP7/MERGE_GEOG_DEG025
+    mkdir ${workrawdir}CTSM53_LUH3_SSP585_CMIP7
+    mkdir ${workrawdir}CTSM53_LUH3_SSP585_CMIP7/MERGE_GEOG_DEG025
+fi
+
+if [ -d ${worksurfdir} ]; 
+then
+    echo "Work Surface Directory ${worksurfdir} Already Exists"
+else
+    mkdir ${worksurfdir}
+    mkdir ${worksurfdir}CTSM53_MODIS_CURRENT
+    mkdir ${worksurfdir}CRU_321
+    mkdir ${worksurfdir}CTSM53_LUH3_HIST_CMIP7
+    mkdir ${worksurfdir}CTSM53_LUH3_SSP119_CMIP7
+    mkdir ${worksurfdir}CTSM53_LUH3_SSP126_CMIP7
+    mkdir ${worksurfdir}CTSM53_LUH3_SSP245_CMIP7
+    mkdir ${worksurfdir}CTSM53_LUH3_SSP370_CMIP7
+    mkdir ${worksurfdir}CTSM53_LUH3_SSP460_CMIP7
+    mkdir ${worksurfdir}CTSM53_LUH3_SSP585_CMIP7
+    mkdir ${worksurfdir}CTSM53_POTVEGINIT
+    mkdir ${worksurfdir}CTSM53_POTVEGCOMB
+    mkdir ${worksurfdir}CTSM53_POTVEGSCALED
+    mkdir ${worksurfdir}CTSM53_POTVEGRECOMB
+    mkdir ${worksurfdir}CTSM53_POTVEGMAX
+    mkdir ${worksurfdir}CTSM53_FORESTMAX
+fi

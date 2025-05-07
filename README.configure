@@ -1,0 +1,45 @@
+Instructions for Configuring the CTSM53 LUH3 Land Use Data Prep Tools
+
+1. Download Toolset from GitHub
+
+2. Compile all the C programs in the bin directory with make
+
+3. Set the Land Use Data Prep Tools Home Directory for this instance
+
+ctsm53landuseprepconfig
+homedir="this directory"
+
+4. Set timeseries raw data locations in:
+
+timeseriesnamelist/timeseriesrawfile.txt
+timeseriesnamelist/timeseriessurffile.txt
+
+5. Set and create the luh3 raw and surface data locations in:
+
+luh3namelist/luh3rawfile.txt
+luh3namelist/luh3surffile.txt 
+
+6. Set and create the luh3 modis cru raw data locations in:
+
+luh3modiscrunamelist/luh3modiscruexperimentfile.txt
+luh3modiscrunamelist/luh3modiscruclimatefile.txt
+
+7. Set and create the luh3 description raw and surface data locations in:
+
+luh3descnamelist/luh3descrawfile.txt
+luh3descnamelist/luh3descsurffile.txt
+
+8. Set and create the working lut, climate, raw and surface data locations in:
+
+worknamelist/workrawfile.txt
+worknamelist/worksurffile.txt
+
+9. Generate all the surface and data directories
+
+tools/runcreatetimeseriesdirs
+tools/runcreateluh3dirs
+tools/runcreateluh3modiscrudirs
+tools/runcreateluh3descdirs
+tools/runcreateworkdirs
+
+Set up completed. Now go to the README.process file.

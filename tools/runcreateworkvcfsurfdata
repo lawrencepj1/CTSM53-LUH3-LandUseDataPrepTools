@@ -1,0 +1,20 @@
+
+if [ ${#} -ne 1 ]
+then
+    echo "Usage: runcreatemodisearthstatsurffile vcfnamelistfile"
+    exit
+fi
+
+if [ -f ./ctsm53landuseprepconfig ]; 
+then
+    source ./ctsm53landuseprepconfig
+fi
+
+if [ -f ../ctsm53landuseprepconfig ]; 
+then
+    source ../ctsm53landuseprepconfig
+fi
+
+vcfnamelistfile=${1}
+
+python ${scriptdir}createworkvcfsurfdata.py ${vcfnamelistfile} ${workrawfile} ${workrawdir} ${regionfile} ${worksurffile} ${worksurfdir}

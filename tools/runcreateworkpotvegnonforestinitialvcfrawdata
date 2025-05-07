@@ -1,0 +1,20 @@
+
+if [ ${#} -ne 1 ]
+then
+    echo "Usage: runcreateluh3potvegnonforestinitialvcfrawfiles potvegnonforestinitialvcfnamelistfile"
+    exit
+fi
+
+if [ -f ./ctsm53landuseprepconfig ]; 
+then
+    source ./ctsm53landuseprepconfig
+fi
+
+if [ -f ../ctsm53landuseprepconfig ]; 
+then
+    source ../ctsm53landuseprepconfig
+fi
+
+potvegnonforestinitialvcfnamelistfile=${1}
+
+${bindir}createnonforestpotvegvcfinitialLUH3CTSM53Deg025bin ${timeseriesrawfile} ${timeseriesrawdir} ${workrawfile} ${workrawdir} ${luh3modiscruclimatefile} ${luh3modiscrurawdir} ${potvegnonforestinitialvcfnamelistfile}

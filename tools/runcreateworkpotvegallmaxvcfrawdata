@@ -1,0 +1,20 @@
+
+if [ ${#} -ne 1 ]
+then
+    echo "Usage: runcreateluh2potvegallpotvegvcfrawfiles potvegallmaxvcfnamelistfile"
+    exit
+fi
+
+if [ -f ./ctsm53landuseprepconfig ]; 
+then
+    source ./ctsm53landuseprepconfig
+fi
+
+if [ -f ../ctsm53landuseprepconfig ]; 
+then
+    source ../ctsm53landuseprepconfig
+fi
+
+potvegallmaxvcfnamelistfile=${1}
+
+${bindir}createallpotvegvcfmaxLUH3CTSM53Deg025bin ${timeseriesrawfile} ${timeseriesrawdir} ${workrawfile} ${workrawdir} ${potvegallmaxvcfnamelistfile}

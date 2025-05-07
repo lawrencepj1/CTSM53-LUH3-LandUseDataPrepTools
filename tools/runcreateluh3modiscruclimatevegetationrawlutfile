@@ -1,0 +1,26 @@
+
+if [ ${#} -ne 4 ]
+then
+    echo "Usage: runcreateluh3modiscruclimatevegetationrawlutfiles experimentname yearname landusename pftname"
+    exit
+fi
+
+if [ -f ./ctsm53landuseprepconfig ]; 
+then
+    source ./ctsm53landuseprepconfig
+fi
+
+if [ -f ../ctsm53landuseprepconfig ]; 
+then
+    source ../ctsm53landuseprepconfig
+fi
+
+experimentname=${1}
+yearname=${2}
+landusename=${3}
+pftname=${4}
+
+processedannualhome="${luh3modiscrurawdir}/${experimentname}/"
+outputfilename="${processedannualhome}${experimentname}.${landusename}.${pftname}.globalclimatepct.${yearname}.data"
+
+python ${scriptdir}createluh3modiscruclimatevegetationrawlutfile.py ${experimentname} ${yearname} ${luh3modiscruexperimentfile} ${luh3surfdir} ${worksurfdir} ${landusename} ${luh3modiscrulandusefile} ${pftname} ${luh3modiscrupftfile} ${outputfilename}

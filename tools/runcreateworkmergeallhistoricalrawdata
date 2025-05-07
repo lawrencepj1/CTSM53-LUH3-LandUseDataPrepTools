@@ -1,0 +1,34 @@
+
+if [ ${#} -ne 1 ]
+then
+    echo "Usage: runcreateluh3mergeallhistoricalrawdata luh3allvcfmergenamelistfile"
+    exit
+fi
+
+if [ -f ./ctsm53landuseprepconfig ]; 
+then
+    source ./ctsm53landuseprepconfig
+fi
+
+if [ -f ../ctsm53landuseprepconfig ]; 
+then
+    source ../ctsm53landuseprepconfig
+fi
+
+luh3allvcfmergenamelistfile=${1}
+
+${bindir}createallmergehistoricalLUH3CTSM53Deg025bin ${timeseriesrawfile} ${timeseriesrawdir} ${workrawfile} ${workrawdir} ${workhistmergefile} PRIMFFRACTREE ${luh3allvcfmergenamelistfile}
+${bindir}createallmergehistoricalLUH3CTSM53Deg025bin ${timeseriesrawfile} ${timeseriesrawdir} ${workrawfile} ${workrawdir} ${workhistmergefile} PRIMFFRACHERB ${luh3allvcfmergenamelistfile}
+${bindir}createallmergehistoricalLUH3CTSM53Deg025bin ${timeseriesrawfile} ${timeseriesrawdir} ${workrawfile} ${workrawdir} ${workhistmergefile} PRIMFFRACBARE ${luh3allvcfmergenamelistfile}
+${bindir}createallmergehistoricalLUH3CTSM53Deg025bin ${timeseriesrawfile} ${timeseriesrawdir} ${workrawfile} ${workrawdir} ${workhistmergefile} SECDFFRACTREE ${luh3allvcfmergenamelistfile}
+${bindir}createallmergehistoricalLUH3CTSM53Deg025bin ${timeseriesrawfile} ${timeseriesrawdir} ${workrawfile} ${workrawdir} ${workhistmergefile} SECDFFRACHERB ${luh3allvcfmergenamelistfile}
+${bindir}createallmergehistoricalLUH3CTSM53Deg025bin ${timeseriesrawfile} ${timeseriesrawdir} ${workrawfile} ${workrawdir} ${workhistmergefile} SECDFFRACBARE ${luh3allvcfmergenamelistfile}
+${bindir}createallmergehistoricalLUH3CTSM53Deg025bin ${timeseriesrawfile} ${timeseriesrawdir} ${workrawfile} ${workrawdir} ${workhistmergefile} PRIMNFRACTREE ${luh3allvcfmergenamelistfile}
+${bindir}createallmergehistoricalLUH3CTSM53Deg025bin ${timeseriesrawfile} ${timeseriesrawdir} ${workrawfile} ${workrawdir} ${workhistmergefile} PRIMNFRACHERB ${luh3allvcfmergenamelistfile}
+${bindir}createallmergehistoricalLUH3CTSM53Deg025bin ${timeseriesrawfile} ${timeseriesrawdir} ${workrawfile} ${workrawdir} ${workhistmergefile} PRIMNFRACBARE ${luh3allvcfmergenamelistfile}
+${bindir}createallmergehistoricalLUH3CTSM53Deg025bin ${timeseriesrawfile} ${timeseriesrawdir} ${workrawfile} ${workrawdir} ${workhistmergefile} SECDNFRACTREE ${luh3allvcfmergenamelistfile}
+${bindir}createallmergehistoricalLUH3CTSM53Deg025bin ${timeseriesrawfile} ${timeseriesrawdir} ${workrawfile} ${workrawdir} ${workhistmergefile} SECDNFRACHERB ${luh3allvcfmergenamelistfile}
+${bindir}createallmergehistoricalLUH3CTSM53Deg025bin ${timeseriesrawfile} ${timeseriesrawdir} ${workrawfile} ${workrawdir} ${workhistmergefile} SECDNFRACBARE ${luh3allvcfmergenamelistfile}
+${bindir}createallmergehistoricalLUH3CTSM53Deg025bin ${timeseriesrawfile} ${timeseriesrawdir} ${workrawfile} ${workrawdir} ${workhistmergefile} RANGEFRACTREE ${luh3allvcfmergenamelistfile}
+${bindir}createallmergehistoricalLUH3CTSM53Deg025bin ${timeseriesrawfile} ${timeseriesrawdir} ${workrawfile} ${workrawdir} ${workhistmergefile} RANGEFRACHERB ${luh3allvcfmergenamelistfile}
+${bindir}createallmergehistoricalLUH3CTSM53Deg025bin ${timeseriesrawfile} ${timeseriesrawdir} ${workrawfile} ${workrawdir} ${workhistmergefile} RANGEFRACBARE ${luh3allvcfmergenamelistfile}

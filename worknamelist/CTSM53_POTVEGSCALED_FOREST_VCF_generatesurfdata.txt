@@ -1,0 +1,7 @@
+author                    Peter Lawrence, lawrence@ucar.edu, NCAR, Terrestrial Sciences Section 
+currentvcfname            CTSM53_POTVEGSCALED_FOREST_VCF
+worksurfoutput            CTSM53_POTVEGSCALED
+worksurfoutputname        CTSM53_POTVEGSCALED_FOREST_VCF_2005_deg025.nc
+workrawinput              CTSM53_POTVEGSCALED
+workrawinputname          FOREST_VCF_GEOG_DEG025
+workrawinputyear          2005

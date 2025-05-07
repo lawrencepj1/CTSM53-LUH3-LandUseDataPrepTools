@@ -1,0 +1,20 @@
+
+if [ ${#} -ne 1 ]
+then
+    echo "Usage: runcreatemodiscurrentsurffile modiscurrentnamelistfile"
+    exit
+fi
+
+if [ -f ./ctsm53landuseprepconfig ]; 
+then
+    source ./ctsm53landuseprepconfig
+fi
+
+if [ -f ../ctsm53landuseprepconfig ]; 
+then
+    source ../ctsm53landuseprepconfig
+fi
+
+modiscurrentnamelistfile=${1}
+
+python ${scriptdir}createtimeseriesclm5surfdata.py ${modiscurrentnamelistfile} ${workrawfile} ${workrawdir} ${regionfile} ${timeseriessurffile} ${timeseriessurfdir}

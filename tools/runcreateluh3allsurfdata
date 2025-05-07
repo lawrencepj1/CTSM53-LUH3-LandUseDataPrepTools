@@ -1,0 +1,23 @@
+
+if [ ${#} -ne 1 ]
+then
+    echo "Usage: runcreateluh3statefile luh3namelistfile"
+    exit
+fi
+
+
+if [ -f ./ctsm53landuseprepconfig ]; 
+then
+    source ./ctsm53landuseprepconfig
+fi
+
+if [ -f ../ctsm53landuseprepconfig ]; 
+then
+    source ../ctsm53landuseprepconfig
+fi
+
+luh3namelistfile=${1}
+
+python ${scriptdir}createluh3statessurfdata.py ${luh3namelistfile} ${timeseriesrawfile} ${timeseriesrawdir} ${luh3rawfile} ${luh3rawdir} ${luh3variablefile} ${regionfile} ${luh3surffile} ${luh3surfdir}
+python ${scriptdir}createluh3transitionssurfdata.py ${luh3namelistfile} ${timeseriesrawfile} ${timeseriesrawdir} ${luh3rawfile} ${luh3rawdir} ${luh3variablefile} ${regionfile} ${luh3surffile} ${luh3surfdir}
+python ${scriptdir}createluh3managementsurfdata.py ${luh3namelistfile} ${timeseriesrawfile} ${timeseriesrawdir} ${luh3rawfile} ${luh3rawdir} ${luh3variablefile} ${regionfile} ${luh3surffile} ${luh3surfdir}
